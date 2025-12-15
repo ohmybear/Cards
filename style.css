@@ -284,3 +284,34 @@ body {
         padding: 15px;      /* Mniejszy margines wewnątrz karty */
     }
 }
+
+/* Nawigacja historii */
+.navigation {
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.nav-btn {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 6px 15px;
+    cursor: pointer;
+    color: var(--text);
+    font-size: 0.9rem;
+    transition: all 0.2s;
+    min-width: 80px;
+}
+
+.nav-btn:hover:not(:disabled) {
+    background-color: var(--accent);
+    color: white;
+    border-color: var(--accent);
+}
+
+.nav-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background-color: #f1f2f6;
+    color: #bdc3c7;
+}
