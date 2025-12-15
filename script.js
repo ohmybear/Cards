@@ -1,38 +1,64 @@
 // KONFIGURACJA
-const AVAILABLE_DECKS = [
-    { name: "Myśl jak każdy!", file: "mysl_jak_kazdy.json" },
-    { name: "Myśl jak każdy! (bez jokerów)", file: "mysl_jak_kazdy_bez_jokerow.json" },
-    { name: "Myśl jak każdy! (jokery)", file: "mysl_jak_kazdy_jokery.json" },
+const AVAILABLE_DECKS = {
+    "Myśl jak każdy!": "mysl_jak_kazdy.json",
+    "Myśl jak każdy! (bez jokerów)": "mysl_jak_kazdy_bez_jokerow.json" ,
+    "Myśl jak każdy! (jokery)": "mysl_jak_kazdy_jokery.json" ,
     // Dodaj tu swoje talie
-];
+};
 
 class CardDeck {
     constructor(panelId) {
         this.panel = document.getElementById(panelId);
+        
+        // 1. Przypisanie elementów HTML (TO MUSI ZOSTAĆ!)
         this.deckSelect = this.panel.querySelector('.deck-select');
         this.replacementToggle = this.panel.querySelector('.replacement-toggle');
-        this.animToggle = this.panel.querySelector('.anim-toggle'); // Nowy checkbox
+        this.animToggle = this.panel.querySelector('.anim-toggle');
         this.cardArea = this.panel.querySelector('.card-area');
         this.statusDisplay = this.panel.querySelector('.deck-status');
         
+        // Przyciski nawigacji
+        this.prevBtn = this.panel.querySelector('.prev-btn');
+        this.nextBtn = this.panel.querySelector('.next-btn');
+
+        // 2. Zmienne stanu
         this.originalCards = [];
         this.currentCards = [];
-        this.isAnimating = false; // Blokada klikania
+        this.history = []; 
+        this.historyIndex = -1;
+        this.isAnimating = false;
+
+        // 3. Generowanie listy talii z globalnej zmiennej
+        this.deckSelect.innerHTML = '<option value="" disabled selected>Wybierz talię...</option>';
+
+        // Pętla pobiera dane z AVAILABLE_DECKS z góry pliku
+        for (const [name, filename] of Object.entries(AVAILABLE_DECKS)) {
+            const option = document.createElement('option');
+            option.value = filename;
+            option.textContent = name;
+            this.deckSelect.appendChild(option);
+        }
         
+        // 4. Uruchomienie
         this.init();
     }
 
     init() {
-        AVAILABLE_DECKS.forEach(deck => {
-            const option = document.createElement('option');
-            option.value = deck.file;
-            option.textContent = deck.name;
-            this.deckSelect.appendChild(option);
-        });
-
+        // ... (stare listenery) ...
         this.deckSelect.addEventListener('change', (e) => this.loadDeck(e.target.value));
         this.cardArea.addEventListener('click', () => this.drawCard());
         this.replacementToggle.addEventListener('change', () => this.resetDeckState());
+        
+        // NOWE: Listenery do przycisków
+        this.prevBtn.addEventListener('click', (e) => {
+            e.stopPropagation(); // Żeby kliknięcie nie wywołało losowania karty
+            this.navigate(-1);
+        });
+        
+        this.nextBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            this.navigate(1);
+        });
     }
 
     async loadDeck(filename) {
@@ -53,32 +79,54 @@ class CardDeck {
 
     resetDeckState() {
         this.currentCards = [...this.originalCards];
+        
+        // NOWE: Reset historii
+        this.history = [];
+        this.historyIndex = -1;
+        this.updateNavButtons();
+        
         this.updateStatus();
     }
 
-    drawCard() {
-        // Zabezpieczenie przed klikaniem w trakcie animacji
+drawCard() {
+        // Blokada jeśli trwa animacja
         if (this.isAnimating) return;
         
+        // Sprawdzenie czy są karty
         if (this.currentCards.length === 0) {
-            if (this.originalCards.length === 0) return;
-            
-            this.cardArea.innerHTML = `
-                <div class="card" style="background-color: #f1f2f6; color: #95a5a6;">
-                    Koniec kart!<br>Kliknij, aby przetasować.
-                </div>`;
-            this.currentCards = [...this.originalCards];
+            this.cardArea.innerHTML = '<div class="card-placeholder">Koniec talii!<br>Zresetuj lub zmień opcje.</div>';
             return;
         }
-
+        
+        // --- TU BRAKOWAŁO TEJ LINII ---
+        // Losujemy liczbę od 0 do liczby kart w talii
         const randomIndex = Math.floor(Math.random() * this.currentCards.length);
+        // ------------------------------
+        
         const drawnCard = this.currentCards[randomIndex];
 
+        // Jeśli tryb bez zwracania, usuwamy kartę z puli
         if (!this.replacementToggle.checked) {
             this.currentCards.splice(randomIndex, 1);
         }
 
-        // Sprawdź czy użytkownik chce długą animację
+        // --- LOGIKA HISTORII ---
+        
+        // 1. Jeśli cofnęliśmy się w historii, ucinamy "przyszłość"
+        if (this.historyIndex < this.history.length - 1) {
+            this.history = this.history.slice(0, this.historyIndex + 1);
+        }
+
+        // 2. Dodajemy nową kartę na koniec
+        this.history.push(drawnCard);
+        this.historyIndex = this.history.length - 1;
+
+        // 3. Aktualizujemy przyciski
+        this.updateNavButtons();
+
+        // -----------------------
+
+        // Wyświetlanie (z animacją lub bez)
         if (this.animToggle.checked) {
             this.playLongAnimation(drawnCard);
         } else {
@@ -86,6 +134,29 @@ class CardDeck {
         }
 
         this.updateStatus();
+    }
+    // Funkcja obsługująca przyciski Wstecz (-1) i Dalej (+1)
+    navigate(direction) {
+        const newIndex = this.historyIndex + direction;
+
+        // Zabezpieczenie przed wyjściem poza zakres
+        if (newIndex >= 0 && newIndex < this.history.length) {
+            this.historyIndex = newIndex;
+            const cardToShow = this.history[this.historyIndex];
+            
+            // Renderujemy kartę (bez długiej animacji tasowania, bo to tylko podgląd)
+            this.renderCard(cardToShow, 'animate-flip');
+            this.updateNavButtons();
+        }
+    }
+
+    // Funkcja włączająca/wyłączająca przyciski
+    updateNavButtons() {
+        // Przycisk Wstecz aktywny tylko, jeśli index > 0
+        this.prevBtn.disabled = this.historyIndex <= 0;
+        
+        // Przycisk Dalej aktywny tylko, jeśli nie jesteśmy na końcu historii
+        this.nextBtn.disabled = this.historyIndex >= this.history.length - 1;
     }
 
     playLongAnimation(cardData) {
