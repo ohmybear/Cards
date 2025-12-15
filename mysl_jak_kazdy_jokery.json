@@ -1,0 +1,57 @@
+[
+  {
+    "content": " 👥 JOKER – \"PARY\" 👥 \n\n W następnej rundzie punkty otrzymują wszyscy gracze, których odpowiedź powtórzyła się dokładnie jeden raz.\nPozostali gracze nie otrzymują punktów.",
+    "backgroundColor": "#000000",
+    "textColor": "#ffffff"
+  },
+  {
+    "content": "⚖️ JOKER – \"OPOZYCJA\" ⚖️ \n\n W następnej rundzie punkty otrzymują wszyscy gracze, których odpowiedź powtórzyła się przynajmniej raz, ale nie była odpowiedzią najczęstszą (tzn. istniały częstsze). Pozostali gracze nie otrzymują punktów.",
+    "backgroundColor": "#000000",
+    "textColor": "#ffffff"
+  },
+  {
+    "content": "💕🫂 JOKER – \"BRATNIE DUSZE\" 🫂💕 \n\n Po przeczytaniu kolejnego pytania każdy z graczy musi dodatkowo wytypować i zapisać imię jednej osoby, która według niego poda tę samą odpowiedź. \nPoprawny typ = +1 punkt.",
+    "backgroundColor": "#000000",
+    "textColor": "#ffffff"
+  },
+  {
+    "content": "🪐 JOKER – \"Z INNEJ PLANETY\" 🪐 \n\n Po przeczytaniu kolejnego pytania każdy z graczy musi dodatkowo wytypować i zapisać imię jednej osoby, która według niego poda inną odpowiedź. \nPoprawny typ = +1 punkt.",
+    "backgroundColor": "#000000",
+    "textColor": "#ffffff"
+  },
+  {
+    "content": "🏹💘 JOKER – \"ŚLEPA SWATKA\" 💘🏹 \n\n Po przeczytaniu kolejnego pytania każdy z graczy może dodatkowo wytypować i zapisać imiona dwóch osób, które według niego podadzą tę samą odpowiedź (nie można wskazać siebie). \nPoprawny typ = +1 punkt.\nNiepoprawny typ = -1 punkt.",
+    "backgroundColor": "#000000",
+    "textColor": "#ffffff"
+  },
+  {
+    "content": "💲💰 JOKER – \"BUKMACHER\" 💰💲\n\n Po przeczytaniu kolejnego pytania każdy z graczy może dodatkowo wytypować i zapisać, ile osób poda najczęściej pojawiającą się odpowiedź. \nZa poprawny typ gracz otrzymuje tyle punktów, ile osób wytypował. Za błędny typ gracz traci jeden punkt.",
+    "backgroundColor": "#000000",
+    "textColor": "#ffffff"
+  },
+  {
+    "content": "🤡🫵 JOKER – \"WSKAŻ FRAJERA\" 🫵🤡\n\n Po przeczytaniu kolejnego pytania każdy z graczy może dodatkowo wytypować i zapisać imię jednej osoby, która według niego nie otrzyma punktów za tę rundę (nie można wskazać siebie).\nPoprawny typ = +1 dodatkowy punkt. Niepoprawny typ = -1 punkt.",
+    "backgroundColor": "#000000",
+    "textColor": "#ffffff"
+  },
+  {
+    "content": "🅱️ JOKER – \"PLAN B\" 🅱️\n\n Po przeczytaniu kolejnego pytania każdy z graczy musi zapisać dwie różne odpowiedzi na zadane pytanie. Jeśli żadna z nich się nigdzie nie powtórzy, gracz traci wszystkie zdobyte punkty. Punkty standardowo zdobywają gracze z najczęstszą odpowiedzią.",
+    "backgroundColor": "#000000",
+    "textColor": "#ffffff"
+  },
+  {
+    "content": "🤕🙏 JOKER – \"UMYSŁ BIEDAKA\" 🙏🤕\n\n W następnej rundzie punkty otrzymują jedynie gracze, którzy udzielili tej samej odpowiedzi co gracz z najmniejszą liczbą punktów. Gracz z najmniejszą liczbą punktów otrzymuje punkt wtedy, gdy jego odpowiedź powtórzy się przynajmniej raz.",
+    "backgroundColor": "#000000",
+    "textColor": "#ffffff"
+  },
+  {
+    "content": "🤑🫰 JOKER – \"UMYSŁ BOGACZA\" 🫰🤑\n\n W następnej rundzie punkty otrzymują jedynie gracze, którzy udzielili tej samej odpowiedzi co gracz z największą liczbą punktów. Gracz z największą liczbą punktów otrzymuje punkt wtedy, gdy jego odpowiedź powtórzy się przynajmniej raz.",
+    "backgroundColor": "#000000",
+    "textColor": "#ffffff"
+  },
+  {
+    "content": "🤐❌ JOKER – \"CENZURA\" ❌🤐\n\n Po przeczytaniu kolejnego pytania gracz z najmniejszą liczbą punktów może wybrać i przedstawić pozostałym graczom jedno słowo, którego nie wolno użyć w odpowiedzi.",
+    "backgroundColor": "#000000",
+    "textColor": "#ffffff"
+  }
+]

@@ -1,0 +1,286 @@
+:root {
+    --bg-color: #f0f2f5;
+    --panel-bg: #ffffff;
+    --accent: #3498db;
+    --accent-hover: #2980b9;
+    --text: #2c3e50;
+    --border: #dfe6e9;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Przycisk podziału ekranu */
+.layout-controls {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index: 100;
+}
+
+.minimal-btn {
+    background: white;
+    border: 1px solid var(--border);
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: var(--text);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: all 0.2s;
+}
+
+.minimal-btn:hover {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+}
+
+/* Układ główny */
+#app-container {
+    flex: 1;
+    display: flex;
+    gap: 0;
+    height: 100%;
+}
+
+.panel {
+    flex: 1;
+    background: var(--panel-bg);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    transition: all 0.3s ease;
+    border-right: 1px solid var(--border);
+    position: relative;
+}
+
+.panel.hidden {
+    display: none;
+}
+
+/* Nowy panel sterowania */
+.controls-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--border);
+}
+
+.controls-row {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.options {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+/* Stylowanie Listy Rozwijanej (Dropdown) */
+.select-container {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+}
+
+.deck-select {
+    width: 100%;
+    appearance: none; /* Usuwa domyślny styl przeglądarki */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: #f8f9fa;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    padding: 12px 15px;
+    font-size: 1rem;
+    color: var(--text);
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.deck-select:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.custom-arrow {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    font-size: 0.8rem;
+    color: #7f8c8d;
+}
+
+/* Checkboxy jako przyciski (Pills) */
+.checkbox-btn {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 0.9rem;
+    user-select: none;
+}
+
+.checkbox-btn input {
+    margin-right: 6px;
+    accent-color: var(--accent);
+    width: 16px;
+    height: 16px;
+}
+
+.deck-status {
+    margin-top: 5px;
+    font-size: 0.85rem;
+    color: #95a5a6;
+    text-align: right;
+    width: 100%;
+}
+
+/* Obszar karty */
+.card-area {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    perspective: 1000px;
+    user-select: none;
+    position: relative;
+}
+
+.card-placeholder {
+    color: #b2bec3;
+    font-size: 1.2rem;
+    border: 2px dashed #dfe6e9;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+/* Wygląd Karty */
+.card {
+    width: 80%;
+    max-width: 500px;
+    aspect-ratio: 16/9;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1), 0 5px 15px rgba(0,0,0,0.05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--text);
+    position: relative;
+    overflow: hidden;
+    word-wrap: break-word;
+    border: 1px solid rgba(0,0,0,0.05);
+    white-space: pre-wrap;
+}
+
+/* Krótka animacja (Flip) */
+.animate-flip {
+    animation: simpleFlip 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes simpleFlip {
+    0% { transform: scale(0.9) rotateX(20deg); opacity: 0; }
+    100% { transform: scale(1) rotateX(0); opacity: 1; }
+}
+
+/* Długa animacja (Shuffle/Shake) */
+.animate-shuffle {
+    animation: shuffleShake 0.8s ease-in-out;
+    background-color: #34495e !important; /* Tył karty */
+    color: transparent !important; /* Ukryj tekst */
+}
+
+/* "Tył karty" wzorek */
+.animate-shuffle::after {
+    content: "↻";
+    position: absolute;
+    color: rgba(255,255,255,0.2);
+    font-size: 4rem;
+    animation: spin 1s infinite linear;
+}
+
+@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+@keyframes shuffleShake {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    10% { transform: translate(-5px, -5px) rotate(-2deg); }
+    20% { transform: translate(5px, 5px) rotate(2deg); }
+    30% { transform: translate(-5px, 5px) rotate(-2deg); }
+    40% { transform: translate(5px, -5px) rotate(2deg); }
+    50% { transform: translate(-3px, 0) rotate(-1deg) scale(0.95); }
+    60% { transform: translate(3px, 0) rotate(1deg) scale(0.95); }
+    100% { transform: translate(0, 0) rotate(0) scale(0); opacity: 0; }
+}
+
+
+/* --- RESPONSYWNOŚĆ (RWD) - WKLEJ NA KOŃCU PLIKU style.css --- */
+
+@media (max-width: 768px) {
+    
+    /* 1. Zmiana układu głównego */
+    #app-container {
+        flex-direction: column; /* Panele jeden pod drugim, a nie obok siebie */
+        overflow-y: auto;       /* Pozwól na przewijanie strony w pionie */
+    }
+
+    /* 2. Ukrycie przycisku dzielenia ekranu na telefonach */
+    /* Dwa panele na telefonie to tłok, więc dla wygody można ukryć tę opcję */
+    .layout-controls {
+        display: none;
+    }
+
+    /* Jeśli jednak chcesz zachować opcję dwóch paneli, usuń powyższe .layout-controls { display: none; } */
+    
+    /* 3. Panel zajmuje całą dostępną szerokość */
+    .panel {
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+        min-height: 100vh; /* Panel zajmuje cały ekran telefonu */
+    }
+
+    /* 4. Większe elementy sterujące (łatwiejsze klikanie palcem) */
+    .controls-wrapper {
+        gap: 15px;
+    }
+
+    .deck-select {
+        padding: 15px;      /* Większe pole wyboru */
+        font-size: 1.1rem;
+    }
+
+    .checkbox-btn {
+        padding: 8px 0;     /* Większe odstępy dla checkboxów */
+        font-size: 1rem;
+    }
+    
+    .checkbox-btn input {
+        width: 20px;        /* Większe kwadraciki */
+        height: 20px;
+    }
+
+    /* 5. Maksymalne wykorzystanie szerokości dla karty */
+    .card {
+        width: 95%;         /* Prawie cała szerokość ekranu */
+        padding: 15px;      /* Mniejszy margines wewnątrz karty */
+    }
+}

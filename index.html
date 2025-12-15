@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Losowanie Kart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="layout-controls">
+        <button id="toggle-split-btn" class="minimal-btn">Podziel ekran ◫</button>
+    </div>
+
+    <main id="app-container" class="single-view">
+        <div class="panel" id="panel-1">
+            <div class="controls-wrapper">
+                <div class="controls-row">
+                    <div class="select-container">
+                        <select class="deck-select">
+                            <option value="" disabled selected>Wybierz talię...</option>
+                        </select>
+                        <span class="custom-arrow">▼</span>
+                    </div>
+                </div>
+                <div class="controls-row options">
+                    <label class="checkbox-btn">
+                        <input type="checkbox" class="replacement-toggle">
+                        <span>Ze zwracaniem</span>
+                    </label>
+                    <label class="checkbox-btn">
+                        <input type="checkbox" class="anim-toggle" checked>
+                        <span>Długa animacja</span>
+                    </label>
+                </div>
+                <div class="deck-status">0/0</div>
+            </div>
+
+            <div class="card-area">
+                <div class="card-placeholder">Wybierz talię</div>
+            </div>
+        </div>
+
+        <div class="panel hidden" id="panel-2">
+            <div class="controls-wrapper">
+                <div class="controls-row">
+                    <div class="select-container">
+                        <select class="deck-select">
+                            <option value="" disabled selected>Wybierz talię...</option>
+                        </select>
+                        <span class="custom-arrow">▼</span>
+                    </div>
+                </div>
+                <div class="controls-row options">
+                    <label class="checkbox-btn">
+                        <input type="checkbox" class="replacement-toggle">
+                        <span>Ze zwracaniem</span>
+                    </label>
+                    <label class="checkbox-btn">
+                        <input type="checkbox" class="anim-toggle" checked>
+                        <span>Długa animacja</span>
+                    </label>
+                </div>
+                <div class="deck-status">0/0</div>
+            </div>
+
+            <div class="card-area">
+                <div class="card-placeholder">Wybierz talię</div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
