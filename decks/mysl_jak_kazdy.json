@@ -356,7 +356,7 @@
     "backgroundColor": "#ffffff"
   },
     {
-    "content": "Wedłu foliarzy _________, ale to bzdura.",
+    "content": "Według foliarzy _________, ale to bzdura.",
     "backgroundColor": "#ffffff"
   },
   {
@@ -414,4 +414,5 @@
     "backgroundColor": "#000000",
     "textColor": "#ffffff"
   }
+
 ]
