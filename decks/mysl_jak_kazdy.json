@@ -1,5 +1,5 @@
 [
-  {
+    {
     "content": "Który smak chipsów jest najlepszy?",
     "backgroundColor": "#ffffff"
   },
@@ -216,7 +216,7 @@
     "backgroundColor": "#ffffff"
   },
   {
-    "content": "Którego z graczy sklonował(a)byś na jeden dzień?",
+    "content": "Który z graczy najładniej rysuje?",
     "backgroundColor": "#ffffff"
   },
   {
@@ -225,10 +225,6 @@
   },
   {
     "content": "Wymień piłkarza.",
-    "backgroundColor": "#ffffff"
-  },
-  {
-    "content": "Galerię zdjęć z telefonu którego z pozostałych graczy przejrzał(a)byś najchętniej?",
     "backgroundColor": "#ffffff"
   },
   {
@@ -351,12 +347,28 @@
     "content": "Gdzie można się zgubić?",
     "backgroundColor": "#ffffff"
   },
-  {
+    {
     "content": "Co jest charakterystycznego dla gatunku fantasy?",
     "backgroundColor": "#ffffff"
   },
     {
     "content": "Według foliarzy _________, ale to bzdura.",
+    "backgroundColor": "#ffffff"
+  },
+    {
+    "content": "_________ jest strasznie przereklamowaną wokalistką.",
+    "backgroundColor": "#ffffff"
+  },
+    {
+    "content": "Wymień polskiego rapera.",
+    "backgroundColor": "#ffffff"
+  },
+    {
+    "content": "Który z graczy najlepiej gotuje?",
+    "backgroundColor": "#ffffff"
+  },
+    {
+    "content": "Jaką książkę przeczytał prawdopodobnie każdy z graczy?",
     "backgroundColor": "#ffffff"
   },
   {
@@ -416,3 +428,4 @@
   }
 
 ]
+
