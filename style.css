@@ -1,49 +1,32 @@
 :root {
-    --bg-color: #f0f2f5;
-    --panel-bg: #ffffff;
     --accent: #3498db;
     --accent-hover: #2980b9;
-    --text: #2c3e50;
-    --border: #dfe6e9;
+    --text: #ffffff;
+    --border: rgba(255, 255, 255, 0.3); /* Półprzezroczyste ramki */
 }
+
+/* --- 1. TŁO I GŁÓWNY UKŁAD --- */
 
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--bg-color);
     height: 100vh;
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    
+    /* Animowany Gradient */
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab, #35d523);
+    background-size: 400% 400%;
+    animation: gradient 90s ease infinite;
 }
 
-/* Przycisk podziału ekranu */
-.layout-controls {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    z-index: 100;
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
-.minimal-btn {
-    background: white;
-    border: 1px solid var(--border);
-    padding: 8px 15px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 0.9rem;
-    color: var(--text);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    transition: all 0.2s;
-}
-
-.minimal-btn:hover {
-    background: var(--accent);
-    color: white;
-    border-color: var(--accent);
-}
-
-/* Układ główny */
 #app-container {
     flex: 1;
     display: flex;
@@ -53,27 +36,50 @@ body {
 
 .panel {
     flex: 1;
-    background: var(--panel-bg);
     display: flex;
     flex-direction: column;
     padding: 20px;
     transition: all 0.3s ease;
-    border-right: 1px solid var(--border);
     position: relative;
+    
+    /* ZMIANA: Usuwamy tło i filtry stąd! */
+    background: transparent !important;
+    backdrop-filter: none !important;
+    border: none !important;
+    
+    /* Usuwamy z-index, żeby nie tworzyć nowej warstwy */
+    z-index: auto; 
 }
 
 .panel.hidden {
     display: none;
 }
 
-/* Nowy panel sterowania */
+/* Przycisk podziału ekranu (prawy górny róg) */
+.layout-controls {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    z-index: 100;
+}
+
+/* --- 3. ELEMENTY STERUJĄCE (MENU) --- */
+
 .controls-wrapper {
     display: flex;
     flex-direction: column;
     gap: 10px;
     margin-bottom: 20px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid var(--border);
+    padding: 15px; /* Dodajemy padding wewnątrz szkła */
+    
+    /* Tu przenosimy efekt szkła! */
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    
+    border-radius: 12px; /* Zaokrąglamy rogi panelu sterowania */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 .controls-row {
@@ -87,7 +93,7 @@ body {
     flex-wrap: wrap;
 }
 
-/* Stylowanie Listy Rozwijanej (Dropdown) */
+/* Lista rozwijana */
 .select-container {
     position: relative;
     width: 100%;
@@ -96,23 +102,15 @@ body {
 
 .deck-select {
     width: 100%;
-    appearance: none; /* Usuwa domyślny styl przeglądarki */
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background-color: #f8f9fa;
-    border: 1px solid #ced4da;
+    appearance: none;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid var(--border);
     border-radius: 8px;
     padding: 12px 15px;
     font-size: 1rem;
-    color: var(--text);
+    color: #333; /* Ciemny tekst na jasnym tle selecta */
     cursor: pointer;
     outline: none;
-    transition: border-color 0.2s;
-}
-
-.deck-select:focus {
-    border-color: var(--accent);
-    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
 }
 
 .custom-arrow {
@@ -121,17 +119,18 @@ body {
     top: 50%;
     transform: translateY(-50%);
     pointer-events: none;
-    font-size: 0.8rem;
     color: #7f8c8d;
 }
 
-/* Checkboxy jako przyciski (Pills) */
+/* Checkboxy (Pills) */
 .checkbox-btn {
     display: flex;
     align-items: center;
     cursor: pointer;
     font-size: 0.9rem;
+    color: white;
     user-select: none;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
 }
 
 .checkbox-btn input {
@@ -141,15 +140,47 @@ body {
     height: 16px;
 }
 
+/* Przyciski Nawigacji (Wstecz/Dalej) */
+.navigation {
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.nav-btn, .minimal-btn {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 6px 15px;
+    cursor: pointer;
+    color: #333;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+
+.nav-btn { min-width: 80px; }
+
+.nav-btn:hover:not(:disabled), .minimal-btn:hover {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+}
+
+.nav-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background: rgba(255,255,255,0.5);
+}
+
 .deck-status {
     margin-top: 5px;
     font-size: 0.85rem;
-    color: #95a5a6;
+    color: rgba(255, 255, 255, 0.7);
     text-align: right;
     width: 100%;
 }
 
-/* Obszar karty */
+/* --- 4. OBSZAR KARTY I SAMA KARTA --- */
+
 .card-area {
     flex: 1;
     display: flex;
@@ -159,25 +190,29 @@ body {
     perspective: 1000px;
     user-select: none;
     position: relative;
+    
+    /* Ważne: Obszar musi być przezroczysty */
+    background: transparent !important;
+    transform: none !important;
+    z-index: auto;
 }
 
 .card-placeholder {
-    color: #b2bec3;
+    color: rgba(255, 255, 255, 0.6);
     font-size: 1.2rem;
-    border: 2px dashed #dfe6e9;
+    border: 2px dashed rgba(255, 255, 255, 0.3);
     padding: 30px;
     border-radius: 12px;
     text-align: center;
 }
 
-/* Wygląd Karty */
+/* KARTA - GŁÓWNY KONTENER */
 .card {
+    /* Ustawienia wymiarów i układu */
     width: 80%;
     max-width: 500px;
     aspect-ratio: 16/9;
-    background-color: white;
     border-radius: 16px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.1), 0 5px 15px rgba(0,0,0,0.05);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -185,15 +220,54 @@ body {
     text-align: center;
     font-size: 1.6rem;
     font-weight: 600;
-    color: var(--text);
-    position: relative;
-    overflow: hidden;
-    word-wrap: break-word;
-    border: 1px solid rgba(0,0,0,0.05);
+    
+    /* Ramka i Cień */
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    
+    /* WAŻNE DLA BLENDOWANIA: */
+    position: relative; 
+    background: transparent !important; /* Karta musi być pusta */
+    overflow: hidden; 
+    
+    /* USUNIĘTO: isolation: isolate; <--- TO BLOKOWAŁO EFEKT! */
+}
+
+/* To jest kolorowe tło karty, które się miesza */
+.card::before {
+    content: '';
+    position: absolute;
+    inset: 0; /* Rozciągnij na całą kartę */
+    
+    /* Kolor z JS */
+    background-color: var(--card-bg);
+    
+    /* TRYB MIESZANIA */
+    /* hard-light: Karta wygląda jak kolorowe szkiełko na gradiencie */
+    /* difference: Karta robi negatyw kolorów */
+    mix-blend-mode: difference; 
+    
+    z-index: -1; /* Pod tekstem */
+}
+
+/* Wymuszamy biały tekst na WSZYSTKIM w środku karty */
+.card, .card * {
+    color: white !important;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.4); /* Cień pod tekstem dla czytelności */
+    z-index: 1; /* Tekst na wierzchu */
     white-space: pre-wrap;
 }
 
-/* Krótka animacja (Flip) */
+/* Dodatkowe zabezpieczenie kontenera treści */
+.card-content {
+    position: relative;
+    z-index: 2;
+    white-space: pre-wrap;
+}
+
+/* --- 5. ANIMACJE --- */
+
+/* Odwracanie (Flip) */
 .animate-flip {
     animation: simpleFlip 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
@@ -203,23 +277,25 @@ body {
     100% { transform: scale(1) rotateX(0); opacity: 1; }
 }
 
-/* Długa animacja (Shuffle/Shake) */
+/* Tasowanie (Shuffle) */
 .animate-shuffle {
     animation: shuffleShake 0.8s ease-in-out;
-    background-color: #34495e !important; /* Tył karty */
-    color: transparent !important; /* Ukryj tekst */
+    background-color: transparent !important; 
 }
 
-/* "Tył karty" wzorek */
+/* Tył karty podczas tasowania */
 .animate-shuffle::after {
     content: "↻";
     position: absolute;
+    inset: 0;
+    background-color: #34495e; /* Ciemny tył */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: rgba(255,255,255,0.2);
     font-size: 4rem;
-    animation: spin 1s infinite linear;
+    z-index: 10;
 }
-
-@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
 
 @keyframes shuffleShake {
     0% { transform: translate(0, 0) rotate(0deg); }
@@ -233,85 +309,35 @@ body {
 }
 
 
-/* --- RESPONSYWNOŚĆ (RWD) - WKLEJ NA KOŃCU PLIKU style.css --- */
+/* --- 6. RESPONSYWNOŚĆ (MOBILE) --- */
 
 @media (max-width: 768px) {
-    
-    /* 1. Zmiana układu głównego */
     #app-container {
-        flex-direction: column; /* Panele jeden pod drugim, a nie obok siebie */
-        overflow-y: auto;       /* Pozwól na przewijanie strony w pionie */
+        flex-direction: column;
+        overflow-y: auto;
     }
 
-    /* 2. Ukrycie przycisku dzielenia ekranu na telefonach */
-    /* Dwa panele na telefonie to tłok, więc dla wygody można ukryć tę opcję */
     .layout-controls {
         display: none;
     }
-
-    /* Jeśli jednak chcesz zachować opcję dwóch paneli, usuń powyższe .layout-controls { display: none; } */
     
-    /* 3. Panel zajmuje całą dostępną szerokość */
     .panel {
         border-right: none;
         border-bottom: 1px solid var(--border);
-        min-height: 100vh; /* Panel zajmuje cały ekran telefonu */
+        min-height: 100vh;
     }
 
-    /* 4. Większe elementy sterujące (łatwiejsze klikanie palcem) */
     .controls-wrapper {
         gap: 15px;
     }
 
     .deck-select {
-        padding: 15px;      /* Większe pole wyboru */
+        padding: 15px;
         font-size: 1.1rem;
     }
 
-    .checkbox-btn {
-        padding: 8px 0;     /* Większe odstępy dla checkboxów */
-        font-size: 1rem;
-    }
-    
-    .checkbox-btn input {
-        width: 20px;        /* Większe kwadraciki */
-        height: 20px;
-    }
-
-    /* 5. Maksymalne wykorzystanie szerokości dla karty */
     .card {
-        width: 95%;         /* Prawie cała szerokość ekranu */
-        padding: 15px;      /* Mniejszy margines wewnątrz karty */
+        width: 95%;
+        padding: 15px;
     }
-}
-
-/* Nawigacja historii */
-.navigation {
-    justify-content: center;
-    margin-top: 5px;
-}
-
-.nav-btn {
-    background: white;
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    padding: 6px 15px;
-    cursor: pointer;
-    color: var(--text);
-    font-size: 0.9rem;
-    transition: all 0.2s;
-    min-width: 80px;
-}
-
-.nav-btn:hover:not(:disabled) {
-    background-color: var(--accent);
-    color: white;
-    border-color: var(--accent);
-}
-
-.nav-btn:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-    background-color: #f1f2f6;
-    color: #bdc3c7;
 }
