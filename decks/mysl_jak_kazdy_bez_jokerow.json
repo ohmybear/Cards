@@ -1,375 +1,383 @@
 [
   {
     "content": "Który smak chipsów jest najlepszy?",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Który sport jest najnudniejszy do oglądania?",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Jaki jest największy owoc, który w całości można zmieścić w ustach?",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Który pokój w domu jest najlepszy?",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Najszybszym sposobem na zarobienie 100 zł jest _______.",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Wymień jedną rzecz, którą można robić w nocy.",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Podaj nazwę miejsca, w którym jest pełno ludzi, którzy woleliby być gdzie indziej.",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Co rośnie szybciej niż byśmy chcieli?",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Kogo nie chciał(a)byś spotkać będąc na randce?",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "W jakim miejscu nie chciał(a)byś spędzić nawet jednej nocy?",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Którym owocem najtrudniej byłoby żonglować?",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Ile BigMac'ów jest w stanie zjeść przeciętny człowiek w ciągu 20 minut?",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Najlepsze narzędzie kuchenne to _______.",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Wymień trylogię filmową.",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Jaka jest najlepsza dziecięca zabawa podwórkowa?",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Najlepsza zupa to ______.",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Co zakłada się na specjalne okazje?",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Podaj popularne imię dla psa.",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Jaką supermoc chciał(a)byś mieć?",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Podaj nazwę gry karcianej.",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Z jakim zwierzęciem nie chciał(a)byś się znaleźć sam na sam?",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Która osoba z grupy byłaby najbardziej przydatna podczas apokalipsy zombie?",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Co wstydził(a)byś się zrobić publicznie?",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Co można polizać?",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Podaj nazwę ptaka, który nie lata.",
-    "backgroundColor": "#ffffff"
-  },
-  {
-    "content": "Najlepszy kształt makaronu to ______.",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Co kojarzy się z czarownicami?",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Wymień coś, czego nie można by było zrobić bez ust.",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Co nastolatek może przynieść do szkoły?",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Co może denerwować podczas jazdy samochodem?",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Co można zrywać?",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Co można ciąć/obciąć?",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Wymień coś, co może robić dziecko, aby zarobić pieniądze.",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Co można robić pod prysznicem?",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Co można znaleźć w garażu?",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Co może zabić postać w grze komputerowej?",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "______ jest królem wśród warzyw.",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "______ jest królem wśród owoców.",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Co może być za długie?",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Co może mieć opływowe kształty?",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Co można robić zimą, czego nie można robić latem?",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Podaj coś ostrego.",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Jakie zwierzę można zobaczyć na wsi?",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Od czego można się uzależnić?",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Wymień postać z \"Kubusia Puchatka\" inną niż Kubuś Puchatek.",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
-    "content": "Z pośród wszystkich graczy, który jest dzisiaj najlepiej ubrany?",
-    "backgroundColor": "#ffffff"
+    "content": "Najgorszy miesiąc w roku to ______.",
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Gdybyś miał nadać inne imię osobie czytającej to pytanie, jakie byś wybrał?",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Gdybyś mógł mieć dodatkowe oko, gdzie na ciele byś je umieścił?",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Wymień czynność, którą robi się przed pójściem spać.",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Jakie jest największe zwierzę, które był(a)byś wstanie wziąć na ręce?",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Który z graczy najszybciej wzruszyłby się w kinie?",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Co można znaleźć na plaży?",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Który z graczy najładniej śpiewa?",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Gdybyś miał(a) spędzić jeden dzień jako któryś z pozostałych graczy, kogo byś wybrał(a)?",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Który z graczy najładniej rysuje?",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Wymień prezydenta Stanów Zjednoczonych.",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Wymień piłkarza.",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Gdybyś musiał(a) usunąć ze świata jeden z popularnych portali społecznościowych, jaki by to był?",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
-    "content": "Lepszą supermocą jest możliwość dwukrotnego powiększenia czy dziesięciokrotnego pomniejszenia swojego ciała?",
-    "backgroundColor": "#ffffff"
+    "content": "Wymień popularny boys band.",
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Wymień narzędzie, którym posługuje się mechanik.",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Za co można dostać uwagę w szkole?",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Który z graczy śmieje się najgłośniej?",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Wymień czarny charakter / antagonistę z filmu.",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Podaj synonim słowa \"fajny\".",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Podaj synonim słowa \"niefajny\".",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Wymień grę komputerową.",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Co można ładować?",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Gdzie można iść na pierwszą randkę?",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Podaj historycznego przywódcę.",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Co można znaleźć w apteczce?",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Podaj typowo męski zawód.",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "W jakim zawodzie przeważają kobiety?",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Który z graczy najlepiej odnalazłby się w polityce?",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Wymień pierwiastek chemiczny.",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Co można zabrać na biwak?",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Wymień drzewo.",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Wymień coś gumowego.",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Kto był (lub jest) największym Polakiem?",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Wymień zieloną postać z filmu lub bajki.",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Co można zwiększyć/powiększyć?",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Wymień influencera/influencerkę.",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Wymień znaną kobietę.",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Co cię boli? \n (czy aż tak cię to boli?)",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "2 + 2 * 2 - 2 = ____.",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Wymień młodzieżowe słowo.",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Co jest jednorazowe?",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
   {
     "content": "Gdzie można się zgubić?",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
     {
     "content": "Co jest charakterystycznego dla gatunku fantasy?",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
     {
     "content": "Według foliarzy _________, ale to bzdura.",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
     {
     "content": "_________ jest strasznie przereklamowaną wokalistką.",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
     {
     "content": "Wymień polskiego rapera.",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
     {
     "content": "Który z graczy najlepiej gotuje?",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
     {
     "content": "Jaką książkę przeczytał prawdopodobnie każdy z graczy?",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
+  },
+    {
+    "content": "Co można znaleźć na statku pirackim?",
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
+  },
+    {
+    "content": "_________ jest strasznie przereklamowanym wokalistą.",
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
+  },
+    {
+    "content": "Wymień postać ze Starego Testamentu.",
+    "backgroundColor": "rgba(0, 0, 255, 0.2)"
   }
 ]
 
