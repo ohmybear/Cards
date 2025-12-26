@@ -184,7 +184,8 @@ renderCard(cardData, animationClass) {
         cardEl.textContent = cardData.content;
         
         if (cardData.backgroundColor) {
-            cardEl.style.backgroundColor = cardData.backgroundColor;
+            cardEl.style.setProperty('--card-bg', cardData.backgroundColor || '#fff');
+            //cardEl.style.backgroundColor = cardData.backgroundColor;
             // Opcjonalne: automatyczny kolor ramki dla bardzo ciemnych kart
             if (['#000000', 'black', '#000'].includes(cardData.backgroundColor)) {
                 cardEl.style.borderColor = '#333';
