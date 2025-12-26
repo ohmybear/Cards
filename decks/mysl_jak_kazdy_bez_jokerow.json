@@ -1,5 +1,5 @@
 [
-  {
+    {
     "content": "Który smak chipsów jest najlepszy?",
     "backgroundColor": "rgba(0, 0, 255, 0.2)"
   },
@@ -380,3 +380,4 @@
     "backgroundColor": "rgba(0, 0, 255, 0.2)"
   }
 ]
+
